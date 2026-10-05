@@ -1,0 +1,1005 @@
+{
+ "version": 1,
+ "phrases": [
+  {
+   "id": "w1d1p1",
+   "week": 1,
+   "day": 1,
+   "theme": "Greetings and politeness",
+   "tl": "Kumusta ka?",
+   "en": "How are you?",
+   "lit": "How + you?",
+   "note": "Casual. From Spanish ¿cómo está?"
+  },
+  {
+   "id": "w1d1p2",
+   "week": 1,
+   "day": 1,
+   "theme": "Greetings and politeness",
+   "tl": "Mabuti naman.",
+   "en": "I'm fine.",
+   "lit": "Good + anyway",
+   "note": "The usual reply. 'Okay lang' also works."
+  },
+  {
+   "id": "w1d1p3",
+   "week": 1,
+   "day": 1,
+   "theme": "Greetings and politeness",
+   "tl": "Ikaw?",
+   "en": "And you?",
+   "lit": "You?",
+   "note": "Bounce the question back."
+  },
+  {
+   "id": "w1d1p4",
+   "week": 1,
+   "day": 1,
+   "theme": "Greetings and politeness",
+   "tl": "Salamat.",
+   "en": "Thanks.",
+   "lit": "Thanks",
+   "note": ""
+  },
+  {
+   "id": "w1d1p5",
+   "week": 1,
+   "day": 1,
+   "theme": "Greetings and politeness",
+   "tl": "Walang anuman.",
+   "en": "You're welcome.",
+   "lit": "Nothing at all",
+   "note": ""
+  },
+  {
+   "id": "w1d2p1",
+   "week": 1,
+   "day": 2,
+   "theme": "Greetings and politeness",
+   "tl": "Magandang umaga.",
+   "en": "Good morning.",
+   "lit": "Beautiful morning",
+   "note": ""
+  },
+  {
+   "id": "w1d2p2",
+   "week": 1,
+   "day": 2,
+   "theme": "Greetings and politeness",
+   "tl": "Magandang hapon.",
+   "en": "Good afternoon.",
+   "lit": "Beautiful afternoon",
+   "note": ""
+  },
+  {
+   "id": "w1d2p3",
+   "week": 1,
+   "day": 2,
+   "theme": "Greetings and politeness",
+   "tl": "Magandang gabi.",
+   "en": "Good evening.",
+   "lit": "Beautiful night",
+   "note": ""
+  },
+  {
+   "id": "w1d2p4",
+   "week": 1,
+   "day": 2,
+   "theme": "Greetings and politeness",
+   "tl": "Salamat po.",
+   "en": "Thank you (polite).",
+   "lit": "Thanks + respect",
+   "note": "Add 'po' for elders, her parents and strangers."
+  },
+  {
+   "id": "w1d2p5",
+   "week": 1,
+   "day": 2,
+   "theme": "Greetings and politeness",
+   "tl": "Ingat.",
+   "en": "Take care / bye.",
+   "lit": "Careful",
+   "note": "The everyday way to say goodbye."
+  },
+  {
+   "id": "w1d3p1",
+   "week": 1,
+   "day": 3,
+   "theme": "Greetings and politeness",
+   "tl": "Opo.",
+   "en": "Yes (polite).",
+   "lit": "Yes + respect",
+   "note": "Use with her parents and elders."
+  },
+  {
+   "id": "w1d3p2",
+   "week": 1,
+   "day": 3,
+   "theme": "Greetings and politeness",
+   "tl": "Oo.",
+   "en": "Yes.",
+   "lit": "Yes",
+   "note": "Sounds like 'oh-oh'. Casual."
+  },
+  {
+   "id": "w1d3p3",
+   "week": 1,
+   "day": 3,
+   "theme": "Greetings and politeness",
+   "tl": "Hindi.",
+   "en": "No.",
+   "lit": "No",
+   "note": ""
+  },
+  {
+   "id": "w1d3p4",
+   "week": 1,
+   "day": 3,
+   "theme": "Greetings and politeness",
+   "tl": "Hindi po.",
+   "en": "No (polite).",
+   "lit": "No + respect",
+   "note": ""
+  },
+  {
+   "id": "w1d3p5",
+   "week": 1,
+   "day": 3,
+   "theme": "Greetings and politeness",
+   "tl": "Sige.",
+   "en": "Okay / sure.",
+   "lit": "Go ahead",
+   "note": "Also means 'bye' at the end of a call."
+  },
+  {
+   "id": "w1d4p1",
+   "week": 1,
+   "day": 4,
+   "theme": "Greetings and politeness",
+   "tl": "Ano'ng pangalan mo?",
+   "en": "What's your name?",
+   "lit": "What + name + your",
+   "note": ""
+  },
+  {
+   "id": "w1d4p2",
+   "week": 1,
+   "day": 4,
+   "theme": "Greetings and politeness",
+   "tl": "Ako si Nik.",
+   "en": "I'm Nik.",
+   "lit": "I + (name marker) + Nik",
+   "note": "'si' goes before people's names."
+  },
+  {
+   "id": "w1d4p3",
+   "week": 1,
+   "day": 4,
+   "theme": "Greetings and politeness",
+   "tl": "Ikinagagalak kitang makilala.",
+   "en": "Nice to meet you.",
+   "lit": "Pleased I-you to meet",
+   "note": "Formal. Many people just say it in English."
+  },
+  {
+   "id": "w1d4p4",
+   "week": 1,
+   "day": 4,
+   "theme": "Greetings and politeness",
+   "tl": "Taga-saan ka?",
+   "en": "Where are you from?",
+   "lit": "From-where + you",
+   "note": ""
+  },
+  {
+   "id": "w1d4p5",
+   "week": 1,
+   "day": 4,
+   "theme": "Greetings and politeness",
+   "tl": "Taga-England ako.",
+   "en": "I'm from England.",
+   "lit": "From-England + I",
+   "note": ""
+  },
+  {
+   "id": "w1d5p1",
+   "week": 1,
+   "day": 5,
+   "theme": "Greetings and politeness",
+   "tl": "Paalam.",
+   "en": "Goodbye.",
+   "lit": "Farewell",
+   "note": "A bit formal. 'Bye' and 'Ingat' are more common."
+  },
+  {
+   "id": "w1d5p2",
+   "week": 1,
+   "day": 5,
+   "theme": "Greetings and politeness",
+   "tl": "Kita tayo mamaya.",
+   "en": "See you later.",
+   "lit": "See + us + later",
+   "note": ""
+  },
+  {
+   "id": "w1d5p3",
+   "week": 1,
+   "day": 5,
+   "theme": "Greetings and politeness",
+   "tl": "Pasensya na.",
+   "en": "Sorry.",
+   "lit": "Patience + now",
+   "note": "For small mistakes or making someone wait."
+  },
+  {
+   "id": "w1d5p4",
+   "week": 1,
+   "day": 5,
+   "theme": "Greetings and politeness",
+   "tl": "Teka lang.",
+   "en": "Wait a moment.",
+   "lit": "Wait + only",
+   "note": ""
+  },
+  {
+   "id": "w1d5p5",
+   "week": 1,
+   "day": 5,
+   "theme": "Greetings and politeness",
+   "tl": "Okay lang.",
+   "en": "It's okay / no problem.",
+   "lit": "Okay + only",
+   "note": "Taglish and very common."
+  },
+  {
+   "id": "w2d1p1",
+   "week": 2,
+   "day": 1,
+   "theme": "Affection",
+   "tl": "Mahal kita.",
+   "en": "I love you.",
+   "lit": "Love + I-you",
+   "note": ""
+  },
+  {
+   "id": "w2d1p2",
+   "week": 2,
+   "day": 1,
+   "theme": "Affection",
+   "tl": "Mahal din kita.",
+   "en": "I love you too.",
+   "lit": "Love + also + I-you",
+   "note": ""
+  },
+  {
+   "id": "w2d1p3",
+   "week": 2,
+   "day": 1,
+   "theme": "Affection",
+   "tl": "Miss na kita.",
+   "en": "I miss you.",
+   "lit": "Miss + already + I-you",
+   "note": ""
+  },
+  {
+   "id": "w2d1p4",
+   "week": 2,
+   "day": 1,
+   "theme": "Affection",
+   "tl": "Miss mo na ba ako?",
+   "en": "Do you miss me?",
+   "lit": "Miss + you + already + (question) + me",
+   "note": ""
+  },
+  {
+   "id": "w2d1p5",
+   "week": 2,
+   "day": 1,
+   "theme": "Affection",
+   "tl": "Ingat ka.",
+   "en": "Take care.",
+   "lit": "Careful + you",
+   "note": "Say it when she's heading out."
+  },
+  {
+   "id": "w2d2p1",
+   "week": 2,
+   "day": 2,
+   "theme": "Affection",
+   "tl": "Ang ganda mo.",
+   "en": "You're beautiful.",
+   "lit": "So beautiful + you",
+   "note": ""
+  },
+  {
+   "id": "w2d2p2",
+   "week": 2,
+   "day": 2,
+   "theme": "Affection",
+   "tl": "Ang cute mo.",
+   "en": "You're cute.",
+   "lit": "So cute + you",
+   "note": ""
+  },
+  {
+   "id": "w2d2p3",
+   "week": 2,
+   "day": 2,
+   "theme": "Affection",
+   "tl": "Mahal ko.",
+   "en": "My love.",
+   "lit": "Love + my",
+   "note": "A sweet name to call her."
+  },
+  {
+   "id": "w2d2p4",
+   "week": 2,
+   "day": 2,
+   "theme": "Affection",
+   "tl": "Ikaw lang.",
+   "en": "Only you.",
+   "lit": "You + only",
+   "note": ""
+  },
+  {
+   "id": "w2d2p5",
+   "week": 2,
+   "day": 2,
+   "theme": "Affection",
+   "tl": "Sana nandito ka.",
+   "en": "I wish you were here.",
+   "lit": "Hopefully + here + you",
+   "note": ""
+  },
+  {
+   "id": "w2d3p1",
+   "week": 2,
+   "day": 3,
+   "theme": "Affection",
+   "tl": "Magandang umaga, mahal ko.",
+   "en": "Good morning, my love.",
+   "lit": "Beautiful morning, love + my",
+   "note": "Send it every morning."
+  },
+  {
+   "id": "w2d3p2",
+   "week": 2,
+   "day": 3,
+   "theme": "Affection",
+   "tl": "Gising ka na?",
+   "en": "Are you awake?",
+   "lit": "Awake + you + already",
+   "note": ""
+  },
+  {
+   "id": "w2d3p3",
+   "week": 2,
+   "day": 3,
+   "theme": "Affection",
+   "tl": "Matulog ka na.",
+   "en": "Go to sleep now.",
+   "lit": "Sleep + you + now",
+   "note": "Caring, not bossy."
+  },
+  {
+   "id": "w2d3p4",
+   "week": 2,
+   "day": 3,
+   "theme": "Affection",
+   "tl": "Tulog na tayo.",
+   "en": "Let's sleep now.",
+   "lit": "Sleep + now + us",
+   "note": ""
+  },
+  {
+   "id": "w2d3p5",
+   "week": 2,
+   "day": 3,
+   "theme": "Affection",
+   "tl": "Usap tayo mamaya.",
+   "en": "Let's talk later.",
+   "lit": "Talk + us + later",
+   "note": ""
+  },
+  {
+   "id": "w2d4p1",
+   "week": 2,
+   "day": 4,
+   "theme": "Affection",
+   "tl": "Iniisip kita.",
+   "en": "I'm thinking of you.",
+   "lit": "Thinking-of + I-you",
+   "note": ""
+  },
+  {
+   "id": "w2d4p2",
+   "week": 2,
+   "day": 4,
+   "theme": "Affection",
+   "tl": "Masaya ako kasama ka.",
+   "en": "I'm happy with you.",
+   "lit": "Happy + I + with + you",
+   "note": ""
+  },
+  {
+   "id": "w2d4p3",
+   "week": 2,
+   "day": 4,
+   "theme": "Affection",
+   "tl": "Ikaw ang lahat sa akin.",
+   "en": "You're everything to me.",
+   "lit": "You + the + everything + to + me",
+   "note": ""
+  },
+  {
+   "id": "w2d4p4",
+   "week": 2,
+   "day": 4,
+   "theme": "Affection",
+   "tl": "Nandito lang ako.",
+   "en": "I'm here for you.",
+   "lit": "Here + only + I",
+   "note": ""
+  },
+  {
+   "id": "w2d4p5",
+   "week": 2,
+   "day": 4,
+   "theme": "Affection",
+   "tl": "Proud ako sa'yo.",
+   "en": "I'm proud of you.",
+   "lit": "Proud + I + of-you",
+   "note": ""
+  },
+  {
+   "id": "w2d5p1",
+   "week": 2,
+   "day": 5,
+   "theme": "Affection",
+   "tl": "Pa-hug.",
+   "en": "Can I have a hug?",
+   "lit": "(request)-hug",
+   "note": "Playful and sweet."
+  },
+  {
+   "id": "w2d5p2",
+   "week": 2,
+   "day": 5,
+   "theme": "Affection",
+   "tl": "Pa-kiss.",
+   "en": "Can I have a kiss?",
+   "lit": "(request)-kiss",
+   "note": ""
+  },
+  {
+   "id": "w2d5p3",
+   "week": 2,
+   "day": 5,
+   "theme": "Affection",
+   "tl": "Kailan tayo magkikita?",
+   "en": "When will we see each other?",
+   "lit": "When + us + will-meet",
+   "note": ""
+  },
+  {
+   "id": "w2d5p4",
+   "week": 2,
+   "day": 5,
+   "theme": "Affection",
+   "tl": "Excited na ako.",
+   "en": "I'm excited.",
+   "lit": "Excited + already + I",
+   "note": ""
+  },
+  {
+   "id": "w2d5p5",
+   "week": 2,
+   "day": 5,
+   "theme": "Affection",
+   "tl": "Malapit na.",
+   "en": "Soon.",
+   "lit": "Near + already",
+   "note": ""
+  },
+  {
+   "id": "w3d1p1",
+   "week": 3,
+   "day": 1,
+   "theme": "Daily check-ins",
+   "tl": "Kumain ka na?",
+   "en": "Have you eaten?",
+   "lit": "Ate + you + already",
+   "note": "A classic way of saying 'I care about you'."
+  },
+  {
+   "id": "w3d1p2",
+   "week": 3,
+   "day": 1,
+   "theme": "Daily check-ins",
+   "tl": "Kumain na ako.",
+   "en": "I've eaten.",
+   "lit": "Ate + already + I",
+   "note": ""
+  },
+  {
+   "id": "w3d1p3",
+   "week": 3,
+   "day": 1,
+   "theme": "Daily check-ins",
+   "tl": "Hindi pa.",
+   "en": "Not yet.",
+   "lit": "No + yet",
+   "note": ""
+  },
+  {
+   "id": "w3d1p4",
+   "week": 3,
+   "day": 1,
+   "theme": "Daily check-ins",
+   "tl": "Ano'ng kinain mo?",
+   "en": "What did you eat?",
+   "lit": "What + eaten + you",
+   "note": ""
+  },
+  {
+   "id": "w3d1p5",
+   "week": 3,
+   "day": 1,
+   "theme": "Daily check-ins",
+   "tl": "Kain tayo.",
+   "en": "Let's eat.",
+   "lit": "Eat + us",
+   "note": ""
+  },
+  {
+   "id": "w3d2p1",
+   "week": 3,
+   "day": 2,
+   "theme": "Daily check-ins",
+   "tl": "Nasaan ka?",
+   "en": "Where are you?",
+   "lit": "Where-at + you",
+   "note": ""
+  },
+  {
+   "id": "w3d2p2",
+   "week": 3,
+   "day": 2,
+   "theme": "Daily check-ins",
+   "tl": "Nasa bahay ako.",
+   "en": "I'm at home.",
+   "lit": "At + house + I",
+   "note": ""
+  },
+  {
+   "id": "w3d2p3",
+   "week": 3,
+   "day": 2,
+   "theme": "Daily check-ins",
+   "tl": "Nasa trabaho ako.",
+   "en": "I'm at work.",
+   "lit": "At + work + I",
+   "note": ""
+  },
+  {
+   "id": "w3d2p4",
+   "week": 3,
+   "day": 2,
+   "theme": "Daily check-ins",
+   "tl": "Pauwi na ako.",
+   "en": "I'm on my way home.",
+   "lit": "Heading-home + already + I",
+   "note": ""
+  },
+  {
+   "id": "w3d2p5",
+   "week": 3,
+   "day": 2,
+   "theme": "Daily check-ins",
+   "tl": "Nandito na ako.",
+   "en": "I'm here now.",
+   "lit": "Here + already + I",
+   "note": ""
+  },
+  {
+   "id": "w3d3p1",
+   "week": 3,
+   "day": 3,
+   "theme": "Daily check-ins",
+   "tl": "Ano'ng ginagawa mo?",
+   "en": "What are you doing?",
+   "lit": "What + doing + you",
+   "note": ""
+  },
+  {
+   "id": "w3d3p2",
+   "week": 3,
+   "day": 3,
+   "theme": "Daily check-ins",
+   "tl": "Wala lang.",
+   "en": "Nothing much.",
+   "lit": "Nothing + only",
+   "note": ""
+  },
+  {
+   "id": "w3d3p3",
+   "week": 3,
+   "day": 3,
+   "theme": "Daily check-ins",
+   "tl": "Nagtatrabaho ako.",
+   "en": "I'm working.",
+   "lit": "Working + I",
+   "note": ""
+  },
+  {
+   "id": "w3d3p4",
+   "week": 3,
+   "day": 3,
+   "theme": "Daily check-ins",
+   "tl": "Busy ako ngayon.",
+   "en": "I'm busy right now.",
+   "lit": "Busy + I + now",
+   "note": ""
+  },
+  {
+   "id": "w3d3p5",
+   "week": 3,
+   "day": 3,
+   "theme": "Daily check-ins",
+   "tl": "Tatawag ako mamaya.",
+   "en": "I'll call later.",
+   "lit": "Will-call + I + later",
+   "note": ""
+  },
+  {
+   "id": "w3d4p1",
+   "week": 3,
+   "day": 4,
+   "theme": "Daily check-ins",
+   "tl": "Pagod na ako.",
+   "en": "I'm tired.",
+   "lit": "Tired + already + I",
+   "note": ""
+  },
+  {
+   "id": "w3d4p2",
+   "week": 3,
+   "day": 4,
+   "theme": "Daily check-ins",
+   "tl": "Antok na ako.",
+   "en": "I'm sleepy.",
+   "lit": "Sleepy + already + I",
+   "note": ""
+  },
+  {
+   "id": "w3d4p3",
+   "week": 3,
+   "day": 4,
+   "theme": "Daily check-ins",
+   "tl": "Kumusta ang araw mo?",
+   "en": "How was your day?",
+   "lit": "How + the + day + your",
+   "note": ""
+  },
+  {
+   "id": "w3d4p4",
+   "week": 3,
+   "day": 4,
+   "theme": "Daily check-ins",
+   "tl": "Okay naman.",
+   "en": "It was fine.",
+   "lit": "Okay + anyway",
+   "note": ""
+  },
+  {
+   "id": "w3d4p5",
+   "week": 3,
+   "day": 4,
+   "theme": "Daily check-ins",
+   "tl": "Nakakapagod.",
+   "en": "It's exhausting.",
+   "lit": "Tiring",
+   "note": ""
+  },
+  {
+   "id": "w3d5p1",
+   "week": 3,
+   "day": 5,
+   "theme": "Daily check-ins",
+   "tl": "Ano'ng balita?",
+   "en": "What's new?",
+   "lit": "What + news",
+   "note": ""
+  },
+  {
+   "id": "w3d5p2",
+   "week": 3,
+   "day": 5,
+   "theme": "Daily check-ins",
+   "tl": "Talaga?",
+   "en": "Really?",
+   "lit": "Really",
+   "note": ""
+  },
+  {
+   "id": "w3d5p3",
+   "week": 3,
+   "day": 5,
+   "theme": "Daily check-ins",
+   "tl": "Ganun ba?",
+   "en": "Is that so?",
+   "lit": "Like-that + (question)",
+   "note": ""
+  },
+  {
+   "id": "w3d5p4",
+   "week": 3,
+   "day": 5,
+   "theme": "Daily check-ins",
+   "tl": "Tama.",
+   "en": "Right.",
+   "lit": "Correct",
+   "note": ""
+  },
+  {
+   "id": "w3d5p5",
+   "week": 3,
+   "day": 5,
+   "theme": "Daily check-ins",
+   "tl": "Ewan ko.",
+   "en": "I don't know.",
+   "lit": "Dunno + I",
+   "note": "Casual. Polite version: 'Hindi ko po alam'."
+  },
+  {
+   "id": "w4d1p1",
+   "week": 4,
+   "day": 1,
+   "theme": "Food and going out",
+   "tl": "Gutom na ako.",
+   "en": "I'm hungry.",
+   "lit": "Hungry + already + I",
+   "note": ""
+  },
+  {
+   "id": "w4d1p2",
+   "week": 4,
+   "day": 1,
+   "theme": "Food and going out",
+   "tl": "Busog na ako.",
+   "en": "I'm full.",
+   "lit": "Full + already + I",
+   "note": ""
+  },
+  {
+   "id": "w4d1p3",
+   "week": 4,
+   "day": 1,
+   "theme": "Food and going out",
+   "tl": "Ang sarap!",
+   "en": "Delicious!",
+   "lit": "So delicious",
+   "note": ""
+  },
+  {
+   "id": "w4d1p4",
+   "week": 4,
+   "day": 1,
+   "theme": "Food and going out",
+   "tl": "Gusto ko ito.",
+   "en": "I like this.",
+   "lit": "Like + I + this",
+   "note": "Also 'I want this'."
+  },
+  {
+   "id": "w4d1p5",
+   "week": 4,
+   "day": 1,
+   "theme": "Food and going out",
+   "tl": "Ayoko nito.",
+   "en": "I don't like this.",
+   "lit": "Don't-want-I + this",
+   "note": ""
+  },
+  {
+   "id": "w4d2p1",
+   "week": 4,
+   "day": 2,
+   "theme": "Food and going out",
+   "tl": "Tara na.",
+   "en": "Let's go.",
+   "lit": "Come-on + now",
+   "note": ""
+  },
+  {
+   "id": "w4d2p2",
+   "week": 4,
+   "day": 2,
+   "theme": "Food and going out",
+   "tl": "Saan tayo pupunta?",
+   "en": "Where are we going?",
+   "lit": "Where + us + will-go",
+   "note": ""
+  },
+  {
+   "id": "w4d2p3",
+   "week": 4,
+   "day": 2,
+   "theme": "Food and going out",
+   "tl": "Kain tayo sa labas.",
+   "en": "Let's eat out.",
+   "lit": "Eat + us + at + outside",
+   "note": ""
+  },
+  {
+   "id": "w4d2p4",
+   "week": 4,
+   "day": 2,
+   "theme": "Food and going out",
+   "tl": "Ano'ng gusto mo?",
+   "en": "What do you want?",
+   "lit": "What + want + you",
+   "note": ""
+  },
+  {
+   "id": "w4d2p5",
+   "week": 4,
+   "day": 2,
+   "theme": "Food and going out",
+   "tl": "Ikaw bahala.",
+   "en": "Up to you.",
+   "lit": "You + in-charge",
+   "note": ""
+  },
+  {
+   "id": "w4d3p1",
+   "week": 4,
+   "day": 3,
+   "theme": "Food and going out",
+   "tl": "Magkano?",
+   "en": "How much?",
+   "lit": "How much",
+   "note": ""
+  },
+  {
+   "id": "w4d3p2",
+   "week": 4,
+   "day": 3,
+   "theme": "Food and going out",
+   "tl": "Magkano po ito?",
+   "en": "How much is this?",
+   "lit": "How much + (polite) + this",
+   "note": ""
+  },
+  {
+   "id": "w4d3p3",
+   "week": 4,
+   "day": 3,
+   "theme": "Food and going out",
+   "tl": "Ang mahal!",
+   "en": "So expensive!",
+   "lit": "So expensive",
+   "note": "'Mahal' means both 'expensive' and 'love'."
+  },
+  {
+   "id": "w4d3p4",
+   "week": 4,
+   "day": 3,
+   "theme": "Food and going out",
+   "tl": "Mura lang.",
+   "en": "It's cheap.",
+   "lit": "Cheap + only",
+   "note": ""
+  },
+  {
+   "id": "w4d3p5",
+   "week": 4,
+   "day": 3,
+   "theme": "Food and going out",
+   "tl": "Bayad po.",
+   "en": "Here's my fare.",
+   "lit": "Payment + (polite)",
+   "note": "Said when paying on a jeepney or tricycle."
+  },
+  {
+   "id": "w4d4p1",
+   "week": 4,
+   "day": 4,
+   "theme": "Food and going out",
+   "tl": "Isa pa po.",
+   "en": "One more, please.",
+   "lit": "One + more + (polite)",
+   "note": ""
+  },
+  {
+   "id": "w4d4p2",
+   "week": 4,
+   "day": 4,
+   "theme": "Food and going out",
+   "tl": "Tubig po.",
+   "en": "Water, please.",
+   "lit": "Water + (polite)",
+   "note": ""
+  },
+  {
+   "id": "w4d4p3",
+   "week": 4,
+   "day": 4,
+   "theme": "Food and going out",
+   "tl": "Pahingi po ng kanin.",
+   "en": "Can I have some rice?",
+   "lit": "Please-give + (polite) + of + rice",
+   "note": ""
+  },
+  {
+   "id": "w4d4p4",
+   "week": 4,
+   "day": 4,
+   "theme": "Food and going out",
+   "tl": "Maanghang ba?",
+   "en": "Is it spicy?",
+   "lit": "Spicy + (question)",
+   "note": ""
+  },
+  {
+   "id": "w4d4p5",
+   "week": 4,
+   "day": 4,
+   "theme": "Food and going out",
+   "tl": "Bill po.",
+   "en": "The bill, please.",
+   "lit": "Bill + (polite)",
+   "note": ""
+  },
+  {
+   "id": "w4d5p1",
+   "week": 4,
+   "day": 5,
+   "theme": "Food and going out",
+   "tl": "Gusto mo ng kape?",
+   "en": "Do you want coffee?",
+   "lit": "Want + you + of + coffee",
+   "note": ""
+  },
+  {
+   "id": "w4d5p2",
+   "week": 4,
+   "day": 5,
+   "theme": "Food and going out",
+   "tl": "Uwi na tayo.",
+   "en": "Let's go home.",
+   "lit": "Home + now + us",
+   "note": ""
+  },
+  {
+   "id": "w4d5p3",
+   "week": 4,
+   "day": 5,
+   "theme": "Food and going out",
+   "tl": "Ang saya!",
+   "en": "So fun!",
+   "lit": "So fun",
+   "note": ""
+  },
+  {
+   "id": "w4d5p4",
+   "week": 4,
+   "day": 5,
+   "theme": "Food and going out",
+   "tl": "Ang init!",
+   "en": "It's so hot!",
+   "lit": "So hot",
+   "note": ""
+  },
+  {
+   "id": "w4d5p5",
+   "week": 4,
+   "day": 5,
+   "theme": "Food and going out",
+   "tl": "Salamat sa pagkain.",
+   "en": "Thanks for the meal.",
+   "lit": "Thanks + for + food",
+   "note": ""
+  }
+ ]
+}

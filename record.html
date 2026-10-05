@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Record for Nik · Salita</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+  .chips { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 8px; margin: 0 -16px; padding-left: 16px; scrollbar-width: none; }
+  .chips button { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 99px; padding: 8px 14px; font-size: 15px; cursor: pointer; }
+  .chips button.on { background: var(--sea); border-color: var(--sea); color: #fff; font-weight: 600; }
+  .rec-item { display: flex; align-items: center; gap: 12px; padding: 14px; border-top: 1px solid var(--line); }
+  .rec-item:first-child { border-top: 0; }
+  .rec-item .t { flex: 1; min-width: 0; }
+  .rec-item .t b { display: block; font-size: 19px; }
+  .rec-item .t span { font-size: 14px; color: var(--ink-2); }
+  .rec-item .icon-btn { width: 48px; height: 48px; }
+  .rec-item.has .t b::after { content: " ✓"; color: var(--good); }
+  .sendbar { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line); }
+  .sendbar .inner { max-width: 560px; margin: 0 auto; }
+  .tips li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main id="view">
+  <div class="eyebrow">Salita · for Jel</div>
+  <h1>Hi Jel! Salamat for helping.</h1>
+  <p class="sub">Nik is learning Tagalog with an app. Your voice will replace the robot voice he hears every day.</p>
+  <div class="card soft small">
+    <b>How to record</b>
+    <ol class="tips" style="margin:6px 0 0;padding-left:20px">
+      <li>Find a quiet room. Hold the phone about a hand's length from your mouth.</li>
+      <li>Tap the orange button, wait half a second, say the phrase once, tap again to stop.</li>
+      <li>Say it naturally, the way you'd really say it to Nik. Not too slow.</li>
+      <li>Tap play to check. Not happy? Just record again.</li>
+      <li>When you finish a week, tap <b>Send to Nik</b> at the bottom.</li>
+    </ol>
+    <p class="muted" style="margin:8px 0 0">Your recordings stay on your phone until you send them. You can stop and come back any time.</p>
+  </div>
+  <div class="chips" id="weeks"></div>
+  <p class="small muted" id="count"></p>
+  <div class="list" id="list"><div class="loading" style="padding:40px 0">Loading…</div></div>
+</main>
+<div class="sendbar"><div class="inner">
+  <button class="btn mango" id="send" disabled>Send to Nik</button>
+</div></div>
+
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const MIC = '<svg viewBox="0 0 24 24"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-5a3.5 3.5 0 0 0-7 0v5A3.5 3.5 0 0 0 12 15zm6-3.5h-2a4 4 0 0 1-8 0H6a6 6 0 0 0 5 5.9V20H8v2h8v-2h-3v-2.6a6 6 0 0 0 5-5.9z"/></svg>';
+const STOP = '<svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>';
+const PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg>';
+
+/* Storage */
+function db() { return new Promise((res, rej) => { const r = indexedDB.open("salita-jel", 1); r.onupgradeneeded = () => r.result.createObjectStore("clips"); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); }
+async function put(k, v) { const d = await db(); return new Promise(r => { const tx = d.transaction("clips", "readwrite"); tx.objectStore("clips").put(v, k); tx.oncomplete = r; }); }
+async function getAll() { const d = await db(); return new Promise(r => { const out = {}; const q = d.transaction("clips").objectStore("clips").openCursor(); q.onsuccess = () => { const c = q.result; if (c) { out[c.key] = c.value; c.continue(); } else r(out); }; }); }
+
+let PHRASES = [], CLIPS = {}, week = 1, rec = null, recId = null;
+const player = new Audio();
+
+async function boot() {
+  PHRASES = (await fetch("phrases.json").then(r => r.json())).phrases;
+  try { CLIPS = await getAll(); } catch { CLIPS = {}; }
+  const weeks = [...new Set(PHRASES.map(p => p.week))];
+  week = weeks.find(w => PHRASES.some(p => p.week === w && !CLIPS[p.id])) || weeks[0];
+  render();
+}
+function render() {
+  const weeks = [...new Set(PHRASES.map(p => p.week))];
+  $("#weeks").innerHTML = weeks.map(w => {
+    const n = PHRASES.filter(p => p.week === w), d = n.filter(p => CLIPS[p.id]).length;
+    return `<button class="${w === week ? "on" : ""}" data-w="${w}">Week ${w} · ${d}/${n.length}</button>`;
+  }).join("");
+  document.querySelectorAll("[data-w]").forEach(b => b.onclick = () => { week = +b.dataset.w; render(); });
+  const list = PHRASES.filter(p => p.week === week);
+  $("#count").textContent = `${list[0].theme}: ${list.filter(p => CLIPS[p.id]).length} of ${list.length} recorded`;
+  $("#list").innerHTML = list.map(p => `
+    <div class="rec-item ${CLIPS[p.id] ? "has" : ""}">
+      <div class="t"><b>${esc(p.tl)}</b><span>${esc(p.en)}</span></div>
+      <button class="icon-btn" data-play="${p.id}" aria-label="Play" ${CLIPS[p.id] ? "" : "disabled style=opacity:.3"}>${PLAY}</button>
+      <button class="icon-btn rec ${recId === p.id ? "on" : ""}" data-rec="${p.id}" aria-label="Record">${recId === p.id ? STOP : MIC}</button>
+    </div>`).join("");
+  document.querySelectorAll("[data-play]").forEach(b => b.onclick = () => { const c = CLIPS[b.dataset.play]; if (c) { player.src = URL.createObjectURL(c.blob); player.play(); } });
+  document.querySelectorAll("[data-rec]").forEach(b => b.onclick = () => toggle(b.dataset.rec));
+  const unsent = Object.values(CLIPS).filter(c => !c.sent).length, total = Object.keys(CLIPS).length;
+  const s = $("#send");
+  s.disabled = total === 0;
+  s.textContent = unsent ? `Send ${unsent} new recording${unsent > 1 ? "s" : ""} to Nik` : total ? `Send all ${total} again` : "Send to Nik";
+}
+async function toggle(id) {
+  if (rec) { rec.stop(); return; }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: true, autoGainControl: true } });
+    const chunks = [];
+    const mr = new MediaRecorder(stream);
+    mr.ondataavailable = e => e.data.size && chunks.push(e.data);
+    mr.onstop = async () => {
+      stream.getTracks().forEach(t => t.stop());
+      const blob = new Blob(chunks, { type: mr.mimeType || "audio/mp4" });
+      const clip = { blob, type: blob.type, sent: false, at: Date.now() };
+      CLIPS[id] = clip; await put(id, clip);
+      rec = null; recId = null; render();
+      player.src = URL.createObjectURL(blob); player.play().catch(() => {});
+    };
+    mr.start(); rec = mr; recId = id; render();
+  } catch (e) { alert("Please allow the microphone so you can record."); }
+}
+
+/* Minimal ZIP writer (no compression) */
+const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(u8) { let c = 0xFFFFFFFF; for (let i = 0; i < u8.length; i++) c = CRC[(c ^ u8[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+async function zip(files) {
+  const enc = new TextEncoder(), parts = [], central = [];
+  let offset = 0;
+  for (const f of files) {
+    const data = new Uint8Array(await f.blob.arrayBuffer()), name = enc.encode(f.name), crc = crc32(data);
+    const h = new DataView(new ArrayBuffer(30));
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint32(14, crc, true);
+    h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, name.length, true);
+    parts.push(h.buffer, name, data);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint32(16, crc, true);
+    c.setUint32(20, data.length, true); c.setUint32(24, data.length, true); c.setUint16(28, name.length, true); c.setUint32(42, offset, true);
+    central.push(c.buffer, name);
+    offset += 30 + name.length + data.length;
+  }
+  const size = central.reduce((s, b) => s + b.byteLength, 0);
+  const e = new DataView(new ArrayBuffer(22));
+  e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true); e.setUint32(12, size, true); e.setUint32(16, offset, true);
+  return new Blob([...parts, ...central, e.buffer], { type: "application/zip" });
+}
+$("#send").onclick = async () => {
+  const entries = Object.entries(CLIPS);
+  let pick = entries.filter(([, c]) => !c.sent);
+  if (!pick.length) pick = entries;
+  const ext = t => t.includes("webm") ? "webm" : t.includes("ogg") ? "ogg" : t.includes("wav") ? "wav" : "m4a";
+  const blob = await zip(pick.map(([id, c]) => ({ name: `${id}.${ext(c.type)}`, blob: c.blob })));
+  const stamp = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
+  const file = new File([blob], `jel-recordings-${stamp}.zip`, { type: "application/zip" });
+  let shared = false;
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try { await navigator.share({ files: [file], title: "Recordings for Nik" }); shared = true; } catch (e) { if (e.name === "AbortError") return; }
+  }
+  if (!shared) {
+    const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = file.name; a.click();
+    alert("Saved to your Downloads. Please send that file to Nik on Messenger or WhatsApp.");
+  }
+  for (const [id, c] of pick) { c.sent = true; await put(id, c); }
+  render();
+};
+boot();
+</script>
+</body>
+</html>
